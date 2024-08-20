@@ -17,17 +17,17 @@ const NavBar = async() => {
         <div className="Sticky top-0 w-full bg-slate-300 z-30 shadow-sm ">
             <div className="py-3 border-b-[2px]">
                 <Container>
-                    <div className="flex items-center justify-between gap-3 md:gap-0">
-                        <Link href="/" className={`${redressed.className} font-bold text-2xl`}>
-                            Bhattarai Ecommerce
+                    <div className="flex items-center justify-between w-full">
+                        <Link href="/" className={`${redressed.className} font-bold text-xl`}>
+                            भट्टराई Ecommerce
                         </Link>
-                        <div className=" md:block">
+                        <div className="hidden md:block flex-grow">
                             <Suspense fallback={<div>Loading</div>}>
                             <SearchBar/>
                             </Suspense>
                             </div>
                         
-                        <div className="flex item-center gap-10 md:gap-12">
+                        <div className="flex items-center gap-4">
                             <CartCount  />
                             <UserMenu  currentUser ={currentUser}/>
                         </div>

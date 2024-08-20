@@ -32,15 +32,22 @@ const SearchBar = () => {
         reset();
     }
 
-    return (<div className="flex items-center">
-        <input
-            {...register('searchTerm')}
-            autoComplete="off"
-            type="text"
-            placeholder="Explore products..."
-            className="p-2 border border-gray-300 rounded-l-md 
-    focus:outline-none focus:border-[0.5px] focus:border-slate-500 w-50"/>
-        <button onClick={handleSubmit(onSubmit)} className="bg-purple-700 hover:opacity-80 text-white p-2 rounded-r-md">Search</button>
+    return (<div className="flex justify-center items-center w-full">
+        <div className="flex items-center w-full max-w-[200px] sm:max-w-[100px] md:max-w-[300px] lg:max-w-[350px]">
+            <input
+                {...register('searchTerm')}
+                autoComplete="off"
+                type="text"
+                placeholder="Explore products..."
+                className="p-2 border border-gray-300 rounded-l-md focus:outline-none focus:border-slate-500 flex-grow"
+            />
+            <button
+                onClick={handleSubmit(onSubmit)}
+                className="bg-purple-700 hover:opacity-80 text-white p-2 rounded-r-md"
+            >
+                Search
+            </button>
+        </div>
     </div>);
 }
 

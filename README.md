@@ -1,6 +1,6 @@
 # Bhattarai Ecommerce
 
-![Bhattarai Ecommerce Preview](public/Screenshot%202024-08-12%20174052.png)
+![Bhattarai Ecommerce Preview](public/prev.png)
 
 Welcome to **Bhattarai Ecommerce**, a modern and feature-rich e-commerce web application designed to bring your kitchenware store online. Built with the latest technologies, this app offers a seamless shopping experience for users and a robust admin interface for managing the store.
 

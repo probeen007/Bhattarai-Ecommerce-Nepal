@@ -6,10 +6,10 @@ const HomeBanner = () => {
                 <div className="mb-8 md:mb-0 text-center">
                     <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Bhattarai Ecommerce</h1>
                     <p className="text-lg md:text-xl text-white mb-2">Explore a Wide Range of Premium Kitchenware</p>
-                    <p className="text-2xl md:text-5xl text-yellow-400 font-bold">Shop Online for Exclusive Offers & Quality Service</p>
+                    <p className="text-2xl md:text-5xl text-yellow-400 font-bold">Shop Online for Exclusive Offers</p>
                 </div>
                 <div className="w-1/3 relative aspect-video">
-                    <Image src='/banner-image.png' fill alt='Banner' className='object-contain'/>
+                    <Image src='/bannerimg.png' fill alt='Banner' className='object-contain'/>
 
                 </div>
             </div>

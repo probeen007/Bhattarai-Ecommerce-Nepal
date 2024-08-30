@@ -104,7 +104,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Recognizing the potential to grow the business and improve customer convenience, you decided to create an e-commerce platform. The goal was to transition the store from a physical-only setup to a fully functional online store. By doing so, you aimed to make it easier for customers to browse and purchase products from anywhere, without needing to visit the physical store.
 
-### Problem It Solves
+## Problem It Solves
 
 The primary problem addressed by **Bhattarai Ecommerce** is the inconvenience faced by customers who had to physically visit the store to see available products and check new stock. This traditional approach limited the store’s reach and accessibility. By moving online, the app solves several issues:
 
@@ -112,7 +112,7 @@ The primary problem addressed by **Bhattarai Ecommerce** is the inconvenience fa
 - **Visibility**: The online platform showcases the full range of products and updates on new stock, which helps in attracting more customers.
 - **Convenience**: Features like a complete shopping cart, search functionality, and secure payment options enhance the shopping experience, making it more user-friendly and efficient.
 
-### Future Vision
+## Future Vision
 
 Looking ahead, you envision **Bhattarai Ecommerce** evolving into a leading online destination for kitchenware, with the following goals:
 

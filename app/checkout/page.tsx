@@ -2,17 +2,21 @@
 import Container from "../components/container";
 import FormWrap from "../components/FormWarp";
 import CheckoutClient from "./CheckoutClient"
-
+import { Suspense } from "react";
 const Checkout = () => {
-    return ( <div className="p-8">
-        <Container>
-            <FormWrap>
-                <CheckoutClient/>
-            </FormWrap>
+    return (<div className="p-8">
+        <Suspense fallback={<div>Loading data...</div>}>
 
-        </Container>
+            <Container>
+                <FormWrap>
+                    <CheckoutClient />
+                </FormWrap>
 
-    </div> );
+            </Container>
+
+        </Suspense>
+
+    </div>);
 }
- 
+
 export default Checkout;

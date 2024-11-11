@@ -3,6 +3,7 @@ import getProducts from "@/actions/getProducts";
 import getCurrentUser from "@/actions/getCurrentUser";
 import NullData from "@/app/components/NullData";
 import ManageProductsClient from "./ManageProductsClient";
+import { Suspense } from "react";
 
 const ManageProducts = async () => {
 
@@ -14,9 +15,13 @@ const ManageProducts = async () => {
     }
 
     return <div className="pt-8">
-        <Container>
-            <ManageProductsClient products = {products}/>
-        </Container>
+        <Suspense fallback={<div>Loading data...</div>}>
+            <Container>
+                <ManageProductsClient products={products} />
+            </Container>
+        </Suspense>
+
+
     </div>
 
 }

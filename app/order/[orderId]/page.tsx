@@ -14,7 +14,7 @@ const Order = async ({ params }: { params: Iprams }) => {
 
     const order = await getOrderById(params)
     if (!order) return <NullData title='No orders found...'></NullData>
-    
+
     return (<div className="p-8">
         <Container>
             <OrderDetails order={order} />

@@ -8,7 +8,7 @@ import { toast } from "react-hot-toast";
 
 type CartContextType = {
     cartTotalQty: number;
-    cartTotalAmount: number ;
+    cartTotalAmount: number;
     cartProducts: CartProductType[] | null;
     handleAddProductToCart: (product: CartProductType) => void;
     handleRemoveProductFromCart: (product: CartProductType) => void;
@@ -16,7 +16,7 @@ type CartContextType = {
     handleCartQtyDecrease: (product: CartProductType) => void;
     handleClearCart: () => void;
     paymentIntent: string | null;
-    handleSetPaymentIntent: (val: string|null) =>void;
+    handleSetPaymentIntent: (val: string | null) => void;
 };
 
 export const CartContext = createContext<CartContextType | null>(null);
@@ -28,10 +28,10 @@ interface Props {
 export const CartContextProvider = (props: Props) => {
     const [cartTotalQty, setCartTotalQty] = useState(0);
     const [cartProducts, setCartProducts] = useState<CartProductType[] | null>(null);
-    const [cartTotalAmount, setCartTotalAmount]=useState(0)
-    
-   const [paymentIntent, setPaymentIntent] = useState<string | null>(null)
-   
+    const [cartTotalAmount, setCartTotalAmount] = useState(0)
+
+    const [paymentIntent, setPaymentIntent] = useState<string | null>(null)
+
     useEffect(() => {
         const cartItems: any = localStorage.getItem('eShopCartItems');
         const cProducts: CartProductType[] | null = JSON.parse(cartItems);
@@ -51,10 +51,10 @@ export const CartContextProvider = (props: Props) => {
                     acc.qty += item.qty;
                     return acc;
                 },
-                 {
-                    total: 0,
-                    qty: 0
-                });
+                    {
+                        total: 0,
+                        qty: 0
+                    });
                 setCartTotalQty(qty)
                 setCartTotalAmount(total)
             }
@@ -74,7 +74,7 @@ export const CartContextProvider = (props: Props) => {
             }
 
 
-            
+
             localStorage.setItem('eShopCartItems', JSON.stringify(updatedCart));
             return updatedCart;
         });
@@ -107,7 +107,7 @@ export const CartContextProvider = (props: Props) => {
             const existingIndex = cartProducts.findIndex((item) => item.id === product.id);
 
             if (existingIndex > -1) {
-                updatedCart[existingIndex].qty =  --updatedCart[existingIndex].qty;
+                updatedCart[existingIndex].qty = --updatedCart[existingIndex].qty;
             }
 
             setCartProducts(updatedCart)
@@ -127,7 +127,7 @@ export const CartContextProvider = (props: Props) => {
             const existingIndex = cartProducts.findIndex((item) => item.id === product.id);
 
             if (existingIndex > -1) {
-                updatedCart[existingIndex].qty =  ++updatedCart[existingIndex].qty;
+                updatedCart[existingIndex].qty = ++updatedCart[existingIndex].qty;
             }
 
             setCartProducts(updatedCart)
@@ -142,7 +142,7 @@ export const CartContextProvider = (props: Props) => {
         localStorage.setItem('eShopCartItems', JSON.stringify(null));
     }, [cartProducts])
 
-    const handleSetPaymentIntent = useCallback((val: string|null) => {
+    const handleSetPaymentIntent = useCallback((val: string | null) => {
         setPaymentIntent(val);
         localStorage.setItem("eShopPaymentIntent", JSON.stringify(val));
     }, [paymentIntent])

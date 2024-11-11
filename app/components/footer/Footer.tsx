@@ -15,12 +15,12 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between pt-16 pb-8">
                     <FooterList>
                         <h3 className="text-base font-bold mb-2">Shop Categories</h3>
-                        <Link href="#"> Phones</Link>
-                        <Link href="#">Laptops</Link>
-                        <Link href="#">Desktops</Link>
-                        <Link href="#">Watches</Link>
-                        <Link href="#">Tvs</Link>
-                        <Link href="#">Accessories</Link>
+                        <Link href="#"> Cookware</Link>
+                        <Link href="#">Cutlery</Link>
+                        <Link href="#">Electric Appliences</Link>
+                        <Link href="#">Cleaning Appliences</Link>
+                        <Link href="#">LPG gas</Link>
+                        <Link href="#">Storing items</Link>
                         
                     </FooterList>
                     <FooterList>
@@ -28,7 +28,7 @@ const Footer = () => {
                         <Link href="#"> Contact us</Link>
                         <Link href="#">Shipping Policy</Link>
                         <Link href="#">Returns & Exchange</Link>
-                        <Link href="#">Watches</Link>
+                        <Link href="#">Adress</Link>
                         <Link href="#">FAQs</Link>
                     </FooterList>
                     <div className="w-full md:w-1/3 mb-6 md:mb-0">

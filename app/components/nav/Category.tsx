@@ -50,14 +50,32 @@ const Category: React.FC<CategoryProps> = ({ label, icon: Icon, selected }) => {
     }, [label, params, router])
 
     return (
-        <div onClick={handleClick} className={`
-        flex items-center justify-center text-center gap-3 p-2 
-    border-b-2 hover:text-slate-800 transition cursor-pointer 
-    ${selected ? 'border-b-slate-800 text-slate-800' : 'border-transparent text-slate-500'}`}>
-            <Icon size={20} />
-            <div className="font-medium text-sm">{label}</div>
+        <div
+            onClick={handleClick}
+            className={`flex items-center gap-2 px-3 py-2 
+            rounded-md shadow-sm transition-all duration-200 ease-in-out cursor-pointer 
+            ${selected ? 'bg-slate-200 border-b-2 border-slate-900 text-slate-900' : 'bg-white border-b-2 border-transparent text-slate-500 hover:shadow-md hover:border-slate-400'}`}
+            style={{ minWidth: '150px', height: '50px' }}
+        >
+            {/* Icon Container */}
+            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-slate-100">
+                <Icon size={20} className={selected ? 'text-slate-900' : 'text-slate-500'} />
+            </div>
+            {/* Label */}
+            <div
+                className="font-medium text-sm tracking-wide truncate"
+                style={{ maxWidth: '100px' }}
+                title={label}  // Show full text on hover
+            >
+                {label}
+            </div>
+        </div>
 
-        </div>);
+
+
+
+
+    );
 }
 
 export default Category;

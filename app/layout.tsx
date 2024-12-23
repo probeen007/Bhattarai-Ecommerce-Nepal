@@ -11,12 +11,10 @@ import { getCurrentUser } from "@/actions/getCurrentUser";
 const poppins = Roboto_Condensed({ subsets: ["latin"], weight: ['400', '700'] });
 
 export const metadata: Metadata = {
-  title: "Bhattarai Bhada Pasal | Gas dilevery - Buddhabhumi-1 pattherkot, kapilvastu",
-  description: "Explore Bhattarai Bhada Pasal for the best deals on high-quality kitchenware, utensils, and cookware in Nepal. From non-stick pans to stainless steel pots, find everything you need to enhance your kitchen.",
+  title: "Bhattarai Bhada Pasal | Gas dilevery",
+  description: "Situated in Buddhabhumi 1, Kapilvastu. Nepal. Explore Bhattarai Bhada Pasal for the best deals on high-quality kitchenware, utensils, and cookware in Nepal. From non-stick pans to stainless steel pots, find everything you need to enhance your kitchen.",
   keywords: "Gas delivery, butwal gas, bhattarai, kitchenware, utensils, cookware, kitchen essentials, puja samagri, gas delivery, affordable kitchen tools, Bhattarai Bhada Pasal, kitchen shop Nepal",
-  viewport: "width=device-width, initial-scale=1.0",
   robots: "index, follow",
-  themeColor: "#ffffff",
   applicationName: "Bhattarai Bhada Pasal",
   openGraph: {
     title: "Bhattarai Bhada Pasal - Your One-Stop Shop for All Kitchenware Needs",
@@ -28,7 +26,7 @@ export const metadata: Metadata = {
         url: "https://www.bhattaraibhadapasal.com/prev.png",
         width: 1200,
         height: 630,
-        alt: "Bhattarai Bhada Pasal Kitchenware",
+        alt: "Bhattarai Bhada Pasal",
       },
     ],
   },
@@ -45,6 +43,7 @@ export default async function RootLayout({
   //console.log ("user :",currentUser)
   return (
     <html lang="en">
+
       <body className={`${poppins.className}text-slate-700`}>
 
         <Toaster toastOptions={{

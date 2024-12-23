@@ -21,15 +21,26 @@ const CartClient: React.FC<CartClientProps> = ({ currentUser }) => {
 
     if (!cartProducts || cartProducts.length === 0) {
         return (
-            <div className="flex flex-col items-center">
-                <div className="text-2xl">Your Cart is empty :(</div>
-                <div>
-                    <Link href={"/"} className="text-slate-500 flex items-center gap-1 mt-2">
-                        <MdArrowBack />
-                        <span>Start Shopping</span>
-                    </Link>
+            <div className="flex flex-col items-center justify-center p-8 bg-gradient-to-r from-white-50 to-blue-100 shadow-xl rounded-lg border border-gray-200 max-w-md mx-auto my-8 sm:max-w-xl md:max-w-2xl lg:max-w-3xl">
+                <div className="text-4xl font-bold text-gray-800 mb-4  text-center sm:text-5xl md:text-6xl">
+                    Your Cart is Empty <span role="img" aria-label="sad-face">😞</span>
                 </div>
+                <div className="text-lg text-gray-600 mb-6 animate__animated animate__fadeIn animate__delay-2s text-center sm:text-xl md:text-2xl">
+                    Looks like you haven’t added anything to your cart yet. Let's fill it up with some great products!
+                </div>
+                <div className="flex items-center gap-3">
+    <Link 
+        href={"/"} 
+        className="text-white bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s flex items-center justify-center gap-2"
+    >
+        <MdArrowBack size={20} className="mb-0.5" />
+        <span>Start Shopping</span>
+    </Link>
+</div>
+
             </div>
+
+
         );
     }
 

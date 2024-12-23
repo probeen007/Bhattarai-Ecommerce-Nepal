@@ -16,12 +16,24 @@ const NavBar = async () => {
             <div className="py-3 border-b-[2px]">
                 <Container>
                     <div className="flex items-center justify-between w-full">
-                        <Link href="/" className={`${redressed.className} font-bold text-xl`}>
-                            भट्टराई Ecommerce
+                        {/* Logo/Icon */}
+                        <Link href="/" className="flex items-center gap-2">
+                            <img
+                                src="/logo.ico" // Path to your icon in the public directory
+                                alt="Logo"
+                                className="w-10 h-10" // Adjust size (e.g., 40px x 40px)
+                            />
+                            <span className="text-black  text-2xl hover:text-gray-400 transition-all duration-300">
+                                भट्टराई Ecommerce
+                            </span>
                         </Link>
+
+                        {/* Search Bar (visible only on larger screens) */}
                         <div className="hidden md:block flex-grow">
                             <SearchBar />
                         </div>
+
+                        {/* Cart and User Menu */}
                         <div className="flex items-center gap-4">
                             <CartCount />
                             <UserMenu currentUser={currentUser} />
@@ -31,6 +43,8 @@ const NavBar = async () => {
             </div>
             <Categories />
         </div>
+
+
     );
 };
 

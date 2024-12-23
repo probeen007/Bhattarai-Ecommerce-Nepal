@@ -32,7 +32,8 @@ const SearchBar = () => {
         reset();
     }
 
-    return (<div className="flex justify-center items-center w-full">
+    return (
+    <div className="flex justify-center items-center w-full">
         <div className="flex items-center w-full max-w-[200px] sm:max-w-[100px] md:max-w-[300px] lg:max-w-[350px]">
             <input
                 {...register('searchTerm')}

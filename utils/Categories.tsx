@@ -1,5 +1,4 @@
-import { AiFillMobile, AiFillPhone, AiOutlineDesktop } from "react-icons/ai";
-import { MdCleaningServices, MdElectricalServices, MdKitchen, MdLaptop, MdLocalGasStation, MdMobileOff, MdOutlineKeyboard, MdPhoneIphone, MdRiceBowl, MdStorage, MdStorefront, MdTv, MdWatch } from "react-icons/md";
+import { MdAgriculture, MdBolt,  MdChangeCircle,  MdCookie,  MdKitchen, MdMediation, MdPropaneTank, MdReceipt, MdRecycling, MdRestaurant, MdRiceBowl, MdStar, MdStore, MdStorefront} from "react-icons/md";
 
 export const categories = [
     {
@@ -12,22 +11,22 @@ export const categories = [
     },
     {
         label: 'Cutlery',
-        icon: MdKitchen
+        icon: MdRestaurant
     },
     {
         label: 'Electric Appliences',
-        icon: MdElectricalServices
+        icon: MdBolt
     },
     {
-        label: 'Cleaning & Maintenance',
-        icon: MdCleaningServices
+        label: 'Puja Items',
+        icon: MdMediation
     },
     {
-        label: 'LPG Accessories',
-        icon: MdLocalGasStation
+        label: 'Gas Accessories',
+        icon: MdPropaneTank
     },
     {
-        label: 'Storage & Organization',
-        icon: MdStorage
+        label: 'Plastic Items',
+        icon:  MdReceipt
     }
 ]

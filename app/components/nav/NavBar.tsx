@@ -19,7 +19,7 @@ const NavBar = async () => {
                         {/* Logo/Icon */}
                         <Link href="/" className="flex items-center gap-2">
                             <img
-                                src="/logo.ico" // Path to your icon in the public directory
+                                src="https://i.ibb.co/6Z5z3yG/icons8-b-67.png" // Path to your icon in the public directory
                                 alt="Logo"
                                 className="w-10 h-10" // Adjust size (e.g., 40px x 40px)
                             />

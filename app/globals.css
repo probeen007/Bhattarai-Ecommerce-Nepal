@@ -2,32 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Ensure search bar is hidden on small screens initially */
-#search-bar {
-    display: none;
-}
-
-/* Show search bar when search icon is clicked on small screens */
-@media (max-width: 767px) {
-    #search-icon-button:focus ~ #search-bar {
-        display: block;
-    }
-
-    #search-icon-button:focus ~ #search-icon-button {
-        display: none;
-    }
-}
-
-
-
-//for nepali font
-@font-face {
-    font-family: 'Aakriti';
-    src: url('/Aakriti.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.nepali-text {
-    font-family: 'Aakriti', sans-serif;
-}

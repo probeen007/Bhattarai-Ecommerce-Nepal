@@ -23,9 +23,20 @@ const NavBar = async () => {
                                 alt="Logo"
                                 className="w-10 h-10" // Adjust size (e.g., 40px x 40px)
                             />
-                            <span className="text-black  text-2xl hover:text-gray-400 transition-all duration-300">
+                            <span className="
+    text-black 
+    text-lg 
+    sm:text-xl 
+    md:text-2xl 
+    lg:text-3xl 
+    xl:text-4xl 
+    hover:text-gray-400 
+    transition-all 
+    duration-300
+">
                                 भट्टराई Ecommerce
                             </span>
+
                         </Link>
 
                         {/* Search Bar (visible only on larger screens) */}
@@ -34,10 +45,20 @@ const NavBar = async () => {
                         </div>
 
                         {/* Cart and User Menu */}
-                        <div className="flex items-center gap-4">
+                        <div className="
+    flex 
+    items-center 
+    gap-3 
+    sm:gap-3 
+    md:gap-4 
+    lg:gap-6 
+    flex-wrap 
+    sm:flex-nowrap
+">
                             <CartCount />
                             <UserMenu currentUser={currentUser} />
                         </div>
+
                     </div>
                 </Container>
             </div>

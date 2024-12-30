@@ -40,7 +40,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             bg-white overflow-hidden right-2 sm:right-0 top-12 text-sm flex flex-col 
             cursor-pointer"
                     >
-                        {currentUser ? (
+                        {currentUser ?
                             <div>
                                 <Link href="/orders">
                                     <MenuItem OnClick={toggleOpen}>Your orders</MenuItem>
@@ -58,20 +58,21 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                                     Logout
                                 </MenuItem>
                             </div>
-                        ) : (
-                            <div>
-                                <Link href="/login">
-                                    <MenuItem OnClick={toggleOpen}>Login</MenuItem>
-                                </Link>
-                                <Link href="/register">
-                                    <MenuItem OnClick={toggleOpen}>Register</MenuItem>
-                                </Link>
-                            </div>
-                        )}
+                            : (
+                                <div>
+                                    <Link href="/login">
+                                        <MenuItem OnClick={toggleOpen}>Login</MenuItem>
+                                    </Link>
+                                    <Link href="/register">
+                                        <MenuItem OnClick={toggleOpen}>Register</MenuItem>
+                                    </Link>
+                                </div>
+                            )}
                     </div>
                 )}
-                {isOpen ? <BackDrop onClick={toggleOpen} /> : null}
             </div>
+
+            {isOpen ? <BackDrop onClick={toggleOpen} /> : null}
 
         </>
     );
